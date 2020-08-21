@@ -9,6 +9,14 @@ $(document).ready(function () {
 
 //---Saving the current day and date to the header of the html file.
     $("#currentDay").text(currentDay + ", " + currentDate);
+
+//---On page refresh it pulls data from local storage.
+    for (let i = 0; i < block.length; i++) {        
+    $(block[i]).val(localStorage.getItem(block[i]));
+    };
+
+//----Changing the color of the time blocks based on current time.
+  
 //---Click event listner to save calendar event to local storage.
     $(".saveBtn").on("click", function() {
        var onClick = $(this).attr("data-value");
@@ -16,8 +24,9 @@ $(document).ready(function () {
        localStorage.setItem(onClick, calEvent);
     });
 
-   
-  
+    
+
+    
      
   
 
