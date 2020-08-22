@@ -33,7 +33,6 @@ function timeBlockColor() {
     };
 }
 timeBlockColor();
-
   
 //---Click event listner to save calendar event to local storage.
     $(".saveBtn").on("click", function() {
@@ -46,12 +45,5 @@ timeBlockColor();
 for (let i = 0; i < block.length; i++) {        
     $(block[i]).val(localStorage.getItem(block[i]));
     };    
-
-    
-     
-  
-
-
-
     
 });
